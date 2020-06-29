@@ -42,6 +42,16 @@ Comparing Models: I compared the accuracy of the KNeighbor Classifier with ADABo
 Using test data to validate results: The original data was split into train and test data set and the model was trained on the trained data set. The trained model was then used to predict the target variables from the test dependent variables. Once the predicted target variables were received, I compared them with the actual target variables from the test data set to get the difference. The f-1 score for this was around 66% and thus, the model was validated. f-1 score was considered becasue it takes into consideration, both the precision as well as recall of the model.
 --> Initially, I was just using the percentage of the times the customer has used an offer and was trying to predict that. I expected my output to be in a form of percentage. But I didn't get expected results. So I assigned the target variable the value 1 if it this percentage was greater than 75% and 0 if not. And thus, my target variable was a boolean. This helped me in getting the results.
 
+### Conclusion and Future Scope:
+
+The problem that I chose to solve was to build a model that predicts whether a customer will respond to an offer. My strategy for solving this problem has four steps. First, I analyzed the data and created some vizualizations to get insights on the data and understand how the various distributions are. Second, I combined offer portfolio, customer profile, and transaction data. Third, I compared the ADABoostClassifier with the KNeighborsClassifiers. I found out that the KNeighborClassifier was fit the training data very well but I also found out that ADABoostClassifier had a better f-1 score than KNeighborClassifier while prediction. This is possibly due to overfit. The F-1 score was 0.58. Fourth, I changed few parameters manually to optimize the ADABoostClassifier f-1 score and the final f-1 score was achieved as 0.66  
+
+
+Because of limited availibility of time, I didn't get a chance to test more features and see if the it increases the model accuracy. The models used could be further optimized by using GridSearch by optimizing the parameters. <br>
+
+Few other models could be used to compare and refine the results. Models such as RandomForestClassifiers are known to perform better than the ADABoostClassifier. But because I had used ADABoost before, I went ahead with it. We could also use Logistic Regression to compare the results.<br>
+
+More focus should be given on the customers who are members and have not done transactions. Sending offers to those customers can help increase the sales.
 
 Please find the blog for the project here:
 https://starbuckscapstone.blogspot.com/2020/06/starbucks-capstone-challenge.html
